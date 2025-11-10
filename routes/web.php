@@ -7,12 +7,15 @@ Route::get('/', function () {
     return view('home');
 });
 
-// About Me Page Route
-Route::get('/about', function () {
-    return view('about');
-});
+// Note: The main /about page was removed in favor of individual About-Me pages per member.
 
 // Contact Page Route
 Route::get('/contact', function () {
     return view('contact');
 });
+
+// Individual About-Me Pages for team members
+Route::view('/about/AboutMe_CB22019', 'abouts.AboutMe_CB22019');
+Route::view('/about/AboutMe_Othman', 'abouts.AboutMe_Othman');
+Route::view('/about/AboutMe_Abdullah', 'abouts.AboutMe_Abdullah');
+Route::view('/about/AboutMe_Elyias', 'abouts.AboutMe_Elyias');
