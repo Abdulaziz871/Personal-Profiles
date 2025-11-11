@@ -50,6 +50,19 @@
             background-color: var(--primary-dark) !important;
             padding: 1rem 0;
             box-shadow: 0 2px 15px rgba(12, 43, 78, 0.1);
+            position: relative;
+            z-index: 1000;
+        }
+        
+        /* Transparent navbar for home page */
+        .navbar-transparent {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
         }
 
         .navbar-brand {

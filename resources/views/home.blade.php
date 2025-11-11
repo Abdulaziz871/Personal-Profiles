@@ -4,13 +4,28 @@
 
 @section('styles')
 <style>
+    /* Make navbar transparent on home page */
+    .navbar {
+        background-color: #0000002b !important;
+        box-shadow: none !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    
     /* Hero Section */
     .hero-section {
-        background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 50%, var(--primary-light) 100%);
+        background-image: url('{{ asset('images/hero-bg.jpg') }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         color: white;
-        padding: 100px 0 80px;
+        padding: 160px 0 100px;
         position: relative;
         overflow: hidden;
+        min-height: 500px;
     }
 
     .hero-section::before {
@@ -20,8 +35,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>');
-        opacity: 0.3;
+        background: linear-gradient(135deg, rgba(12, 43, 78, 0.2) 0%, rgba(26, 61, 100, 0.6) 50%, rgba(29, 84, 108, 0.8) 100%);
+        z-index: 0;
     }
 
     .hero-content {
@@ -225,14 +240,14 @@
             <div class="col-md-6 col-lg-3">
                 <div class="team-card">
                     <div class="team-card-header">
-                        <div class="team-member-icon">
-                            <span>OA</span>
+                        <div style="display:flex;align-items:center;justify-content:center;">
+                            <img src="{{ asset('images/othman.jpg') }}" alt="Othman Abdulaziz" class="rounded-circle" style="width:90px;height:90px;object-fit:cover;border:4px solid rgba(255,255,255,0.9);box-shadow:0 4px 15px rgba(0,0,0,0.2);">
                         </div>
                     </div>
                     <div class="team-card-body">
                         <h5>Othman Abdulaziz</h5>
                         <p class="team-role">Team Member</p>
-                        <p class="team-description">Passionate about web development and creating innovative solutions.</p>
+                        <p class="team-description">Passionate about web development and Data Science and creating innovative solutions.</p>
                         <a href="{{ url('/about/AboutMe_Othman') }}" class="btn btn-outline-primary-custom btn-sm mt-3">About Me</a>
                     </div>
                 </div>
