@@ -326,7 +326,7 @@
                             @endphp
                             @if(count($videos) > 0)
                                 @foreach($videos as $video)
-                                    @if(in_array(pathinfo($video, PATHINFO_EXTENSION), ['mp4', 'webm', 'mov', 'avi']))
+                                    @if(in_array(strtolower(pathinfo($video, PATHINFO_EXTENSION)), ['mp4', 'webm', 'mov', 'avi']))
                                         <div class="video-card" data-video="{{ asset('videos/Elyas Videos/' . $video) }}" title="{{ pathinfo($video, PATHINFO_FILENAME) }}">
                                             <div class="video-thumbnail">
                                                 <i class="fas fa-play-circle fa-3x" style="color: white;"></i>
@@ -532,9 +532,28 @@
                                         document.querySelectorAll('.video-card').forEach(card => {
                                             card.addEventListener('click', function() {
                                                 const videoSrc = this.getAttribute('data-video');
-                                                document.getElementById('modalVideo').src = videoSrc;
+                                                const modalVideo = document.getElementById('modalVideo');
+                                                modalVideo.src = videoSrc;
+                                                // ensure video is ready
+                                                modalVideo.load();
                                                 $('#videoModal').modal('show');
                                             });
+                                        });
+
+                                        // Stop and clear video when modal closes to release resources
+                                        $('#videoModal').on('hidden.bs.modal', function () {
+                                            const modalVideo = document.getElementById('modalVideo');
+                                            if (modalVideo) {
+                                                modalVideo.pause();
+                                                modalVideo.removeAttribute('src');
+                                                modalVideo.load();
+                                            }
+                                        });
+
+                                        // Clear image modal src when closed
+                                        $('#imageModal').on('hidden.bs.modal', function () {
+                                            const img = document.getElementById('modalImage');
+                                            if (img) { img.src = ''; }
                                         });
                                     </script>
                 </div>
