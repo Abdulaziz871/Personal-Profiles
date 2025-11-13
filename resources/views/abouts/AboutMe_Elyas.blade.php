@@ -311,35 +311,7 @@
                         </div>
                     </div>
 
-                    <!-- Video Gallery -->
-                    <h6 class="mt-4 mb-3"><strong><i class="fas fa-film me-2"></i>Video Gallery</strong></h6>
-                    
-                    <!-- Cinematic Reels -->
-                    <div class="gallery-section mb-4">
-                        <div class="gallery-header mb-2">
-                            <h6 class="mb-0"><i class="fas fa-video me-2" style="color: #FF1744;"></i>Cinematic Reels</h6>
-                        </div>
-                        <div class="horizontal-gallery" id="video-gallery">
-                            @php
-                                $videosPath = public_path('videos/Elyas Videos');
-                                $videos = is_dir($videosPath) ? array_diff(scandir($videosPath), ['.', '..']) : [];
-                            @endphp
-                            @if(count($videos) > 0)
-                                @foreach($videos as $video)
-                                    @if(in_array(strtolower(pathinfo($video, PATHINFO_EXTENSION)), ['mp4', 'webm', 'mov', 'avi']))
-                                        <div class="video-card" data-video="{{ asset('videos/Elyas Videos/' . $video) }}" title="{{ pathinfo($video, PATHINFO_FILENAME) }}">
-                                            <div class="video-thumbnail">
-                                                <i class="fas fa-play-circle fa-3x" style="color: white;"></i>
-                                                <span class="video-title">{{ pathinfo($video, PATHINFO_FILENAME) }}</span>
-                                            </div>
-                                        </div>
-                                    @endif
-                                @endforeach
-                            @else
-                                <p class="text-muted small"><em>Videos will be displayed here once uploaded to /public/videos/Elyas Videos/</em></p>
-                            @endif
-                        </div>
-                    </div>
+                    <!-- Video Gallery removed -->
 
                     <!-- Image Lightbox Modal -->
                     <div class="modal fade" id="imageModal" tabindex="-1" role="dialog">
@@ -437,66 +409,7 @@
                             background-color: #000;
                         }
 
-                        /* Video Gallery Styles */
-                        .video-card {
-                            flex: 0 0 auto;
-                            height: 250px;
-                            width: 350px;
-                            border-radius: 8px;
-                            overflow: hidden;
-                            cursor: pointer;
-                            position: relative;
-                            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-                            transition: transform 0.3s ease, box-shadow 0.3s ease;
-                            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                        }
-
-                        .video-thumbnail {
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 10px;
-                            position: relative;
-                        }
-
-                        .video-thumbnail i {
-                            transition: transform 0.3s ease;
-                        }
-
-                        .video-thumbnail .video-title {
-                            color: white;
-                            font-size: 14px;
-                            text-align: center;
-                            padding: 0 10px;
-                            font-weight: 500;
-                            word-break: break-word;
-                        }
-
-                        .video-card:hover {
-                            transform: scale(1.03);
-                            box-shadow: 0 4px 16px rgba(255,23,68,0.3);
-                        }
-
-                        .video-card:hover .video-thumbnail i {
-                            transform: scale(1.2);
-                        }
-
-                        @media (max-width: 768px) {
-                            .video-card {
-                                height: 200px;
-                                width: 300px;
-                            }
-                        }
-
-                        @media (max-width: 576px) {
-                            .video-card {
-                                height: 150px;
-                                width: 250px;
-                            }
-                        }
+                        /* Video styles removed */
                     </style>
 
                     <script>
@@ -509,47 +422,7 @@
                         });
                     </script>
 
-                                    <!-- Video Player Modal -->
-                                    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog modal-fullscreen" role="document">
-                                            <div class="modal-content bg-dark">
-                                                <div class="modal-body p-0 d-flex align-items-center justify-content-center" style="background-color: #000; min-height: 100vh;">
-                                                    <video id="modalVideo" style="max-width: 95%; max-height: 95vh;" controls>
-                                                        Your browser does not support the video tag.
-                                                    </video>
-                                                </div>
-                                                <div class="modal-footer bg-dark border-secondary">
-                                                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times; Close</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <script>
-                                        // Video Gallery Click Handlers
-                                        document.querySelectorAll('.video-card').forEach(card => {
-                                            card.addEventListener('click', function() {
-                                                const videoSrc = this.getAttribute('data-video');
-                                                const modalVideo = document.getElementById('modalVideo');
-                                                modalVideo.src = videoSrc;
-                                                // ensure video is ready
-                                                modalVideo.load();
-                                                $('#videoModal').modal('show');
-                                            });
-                                        });
-
-                                        // Stop and clear video when modal closes to release resources
-                                        $('#videoModal').on('hidden.bs.modal', function () {
-                                            const modalVideo = document.getElementById('modalVideo');
-                                            if (modalVideo) {
-                                                modalVideo.pause();
-                                                modalVideo.removeAttribute('src');
-                                                modalVideo.load();
-                                            }
-                                        });
-
                                         // Clear image modal src when closed
                                         $('#imageModal').on('hidden.bs.modal', function () {
                                             const img = document.getElementById('modalImage');
