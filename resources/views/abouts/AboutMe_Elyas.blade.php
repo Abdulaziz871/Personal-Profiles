@@ -676,10 +676,10 @@
                                 </div>
                             </a>
                         </div>
+                    </div>
 
-                        <div class="mt-4 text-center">
-                            <a href="{{ url('/') }}" class="back-home-btn"><i class="fas fa-home"></i> Back to Home</a>
-                        </div>
+                    <div class="text-center mt-4">
+                        <a href="{{ url('/') }}" class="back-home-btn"><i class="fas fa-home"></i> Back to Home</a>
                     </div>
 
                 </div>
