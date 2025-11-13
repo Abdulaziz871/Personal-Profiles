@@ -298,7 +298,7 @@
                     <div class="team-card-body">
                         <h5>Elyas Alwashali</h5>
                         <p class="team-role">Team Member</p>
-                        <p class="team-description">Enthusiastic about modern web technologies and best practices.</p>
+                        <p class="team-description">Focused on creative photography, videography, and immersive VR/3D design</p>
                         <a href="{{ url('/about/AboutMe_Elyas') }}" class="btn btn-outline-primary-custom btn-sm mt-3">About Me</a>
                     </div>
                 </div>
