@@ -18,4 +18,4 @@ Route::get('/contact', function () {
 Route::view('/about/AboutMe_CB22019', 'abouts.AboutMe_CB22019');
 Route::view('/about/AboutMe_Othman', 'abouts.AboutMe_Othman');
 Route::view('/about/AboutMe_Abdullah', 'abouts.AboutMe_Abdullah');
-Route::view('/about/AboutMe_Elyias', 'abouts.AboutMe_Elyias');
+Route::view('/about/AboutMe_Elyas', 'abouts.AboutMe_Elyas');

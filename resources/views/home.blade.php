@@ -287,19 +287,19 @@
                 </div>
             </div>
 
-            <!-- Team Member 4: Elyias -->
+            <!-- Team Member 4: Elyas -->
             <div class="col-md-6 col-lg-3">
                 <div class="team-card">
                     <div class="team-card-header">
-                        <div class="team-member-icon">
-                            <span>EL</span>
+                        <div style="display:flex;align-items:center;justify-content:center;">
+                            <img src="{{ asset('images/CD22080.jpg') }}" alt="Elyas" class="rounded-circle" style="width:90px;height:90px;object-fit:cover;border:4px solid rgba(255,255,255,0.9);box-shadow:0 4px 15px rgba(0,0,0,0.2);">
                         </div>
                     </div>
                     <div class="team-card-body">
-                        <h5>Elyias</h5>
+                        <h5>Elyas Alwashali</h5>
                         <p class="team-role">Team Member</p>
                         <p class="team-description">Enthusiastic about modern web technologies and best practices.</p>
-                        <a href="{{ url('/about/AboutMe_Elyias') }}" class="btn btn-outline-primary-custom btn-sm mt-3">About Me</a>
+                        <a href="{{ url('/about/AboutMe_Elyas') }}" class="btn btn-outline-primary-custom btn-sm mt-3">About Me</a>
                     </div>
                 </div>
             </div>
