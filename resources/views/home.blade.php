@@ -14,7 +14,7 @@
         right: 0;
         z-index: 1000;
     }
-    
+
     /* Hero Section */
     .hero-section {
         background-image: url('{{ asset('images/hero-bg.jpg') }}');
@@ -264,7 +264,7 @@
                     <div class="team-card-body">
                         <h5>Meshaal Hisham</h5>
                         <p class="team-role">Team Member</p>
-                        <p class="team-description">Dedicated to building responsive and user-friendly interfaces.</p>
+                        <p class="team-description">Passionate about building efficient solutions, exploring data analytics, and applying AI concepts to solve real-world problems.</p>
                         <a href="{{ url('/about/AboutMe_CB22019') }}" class="btn btn-outline-primary-custom btn-sm mt-3">About Me</a>
                     </div>
                 </div>
