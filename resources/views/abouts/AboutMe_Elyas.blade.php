@@ -559,25 +559,127 @@
                 </div>
 
                 <div class="about-card text-center mt-4">
-                    <hr>
-                    <h5><strong><i class="fas fa-link me-2"></i>Contact & Links</strong></h5>
-                    <div class="d-flex gap-3 align-items-center justify-content-center">
-                        <a href="mailto:eliasalwashli@gmil.com" class="text-decoration-none" title="Email">
-                            <i class="fas fa-envelope fa-lg"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/elias-al-washli/" target="_blank" class="text-decoration-none" title="LinkedIn">
-                            <i class="fab fa-linkedin fa-lg"></i>
-                        </a>
-                        <a href="https://www.instagram.com/elias_alwashli" target="_blank" class="text-decoration-none" title="Instagram">
-                            <i class="fab fa-instagram fa-lg"></i>
-                        </a>
-                        <a href="https://www.behance.net/eliasalwashli" target="_blank" class="text-decoration-none" title="Behance">
-                            <i class="fab fa-behance fa-lg"></i>
-                        </a>
-                    </div>
+                    <style>
+                        .contact-panel {
+                            background: linear-gradient(90deg, #072a45 0%, #123a57 50%, #1e516f 100%);
+                            border-radius: 12px;
+                            padding: 26px;
+                            box-shadow: inset 0 6px 18px rgba(255,255,255,0.03), 0 10px 30px rgba(2,18,32,0.35);
+                            color: #fff;
+                        }
 
-                    <div class="mt-4">
-                        <a href="{{ url('/') }}" class="btn btn-outline-primary-custom">Back to Home</a>
+                        .contact-panel h5 { color: #fff; font-weight:700; }
+
+                        .contact-row {
+                            display: flex;
+                            gap: 18px;
+                        }
+
+                        .contact-card {
+                            background: rgba(255,255,255,0.04);
+                            border-radius: 10px;
+                            padding: 14px 16px;
+                            display: flex;
+                            gap: 14px;
+                            align-items: flex-start;
+                            flex: 1 1 0;
+                            text-align: left;
+                            color: #fff;
+                            text-decoration: none;
+                        }
+
+                        .contact-icon {
+                            width: 48px;
+                            height: 48px;
+                            border-radius: 8px;
+                            background: rgba(255,255,255,0.06);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 20px;
+                        }
+
+                        .contact-title { font-weight: 700; font-size: 14px; }
+                        .contact-value { font-size: 14px; opacity: 0.95; }
+
+                        .contact-stack { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
+
+                        .back-home-btn {
+                            background: #0b2742;
+                            color: #fff;
+                            border-radius: 10px;
+                            padding: 12px 28px;
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 10px;
+                            box-shadow: 0 6px 18px rgba(2,18,32,0.4);
+                            border: none;
+                            text-decoration: none;
+                        }
+
+                        @media (max-width: 768px) {
+                            .contact-row { flex-direction: column; }
+                        }
+                    </style>
+
+                    <div class="contact-panel">
+                        <h5 class="mb-3"><i class="fas fa-id-card me-2"></i>Contact Information</h5>
+
+                        <div class="contact-row">
+                            <a href="mailto:eliasalwashli@gmil.com" class="contact-card">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <div class="contact-title">Email</div>
+                                    <div class="contact-value">eliasalwashli@gmil.com</div>
+                                </div>
+                            </a>
+
+                            <a href="tel:00966506482600" class="contact-card">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div>
+                                    <div class="contact-title">Phone</div>
+                                    <div class="contact-value">00966506482600</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="contact-stack">
+                            <a href="https://www.linkedin.com/in/elias-al-washli/" target="_blank" class="contact-card">
+                                <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                                <div>
+                                    <div class="contact-title">LinkedIn</div>
+                                    <div class="contact-value">linkedin.com/in/elias-al-washli/</div>
+                                </div>
+                            </a>
+
+                            <a href="https://www.instagram.com/elias_alwashli" target="_blank" class="contact-card">
+                                <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                                <div>
+                                    <div class="contact-title">Instagram</div>
+                                    <div class="contact-value">@elias_alwashli</div>
+                                </div>
+                            </a>
+
+                            <a href="https://api.whatsapp.com/send/?phone=966506482600&text&type=phone_number&app_absent=0" target="_blank" class="contact-card">
+                                <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                                <div>
+                                    <div class="contact-title">WhatsApp</div>
+                                    <div class="contact-value">00966506482600</div>
+                                </div>
+                            </a>
+
+                            <a href="https://www.behance.net/eliasalwashli" target="_blank" class="contact-card">
+                                <div class="contact-icon"><i class="fab fa-behance"></i></div>
+                                <div>
+                                    <div class="contact-title">Behance</div>
+                                    <div class="contact-value">behance.net/eliasalwashli</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mt-4 text-center">
+                            <a href="{{ url('/') }}" class="back-home-btn"><i class="fas fa-home"></i> Back to Home</a>
+                        </div>
                     </div>
 
                 </div>
