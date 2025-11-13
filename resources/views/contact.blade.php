@@ -279,7 +279,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h5>Location</h5>
-                        <p>City, Country</p>
+                        <p>Pahang, Malaysia</p>
                     </div>
                     
                     <div class="social-links">
