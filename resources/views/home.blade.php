@@ -282,7 +282,7 @@
                         <h5>Abdullah Bagaber</h5>
                         <p class="team-role">Team Member</p>
                         <p class="team-description">Focused on clean code and efficient problem-solving approaches.</p>
-                        <a href="{{ url('/about/AboutMe_Abdullah') }}" class="btn btn-outline-primary-custom btn-sm mt-3">About Me</a>
+                        <a href="{{ url('/about/AboutMe_CB22015') }}" class="btn btn-outline-primary-custom btn-sm mt-3">About Me</a>
                     </div>
                 </div>
             </div>
