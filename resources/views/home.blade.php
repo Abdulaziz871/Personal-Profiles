@@ -274,8 +274,8 @@
             <div class="col-md-6 col-lg-3">
                 <div class="team-card">
                     <div class="team-card-header">
-                        <div class="team-member-icon">
-                            <span>AB</span>
+                        <div style="display:flex;align-items:center;justify-content:center;">
+                            <img src="{{ asset('images/abdullah.jpg') }}" alt="Abdullah Bagaber" class="rounded-circle" style="width:90px;height:90px;object-fit:cover;border:4px solid rgba(255,255,255,0.9);box-shadow:0 4px 15px rgba(0,0,0,0.2);">
                         </div>
                     </div>
                     <div class="team-card-body">

@@ -17,5 +17,5 @@ Route::get('/contact', function () {
 // Individual About-Me Pages for team members
 Route::view('/about/AboutMe_CB22019', 'abouts.AboutMe_CB22019');
 Route::view('/about/AboutMe_Othman', 'abouts.AboutMe_Othman');
-Route::view('/about/AboutMe_Abdullah', 'abouts.AboutMe_Abdullah');
+Route::view('/about/AboutMe_Abdullah', 'abouts.AboutMe_CB22015');
 Route::view('/about/AboutMe_Elyias', 'abouts.AboutMe_Elyias');
